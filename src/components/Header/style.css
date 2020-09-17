@@ -1,0 +1,31 @@
+.header{
+    border:solid black 1px;
+    height: 145px;
+    width:100%;
+    background-color:pink ;
+    text-align:center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+  }
+  .title{
+    position: absolute;
+    margin-left: 42%;
+    margin-top: 3.5%;
+  }
+  
+  .pic{
+    height: 100px;
+    width: 100px;
+  }
+  
+  .picDiv{
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+  }
+  
+  .picDivTwo{
+    margin-top: 2%;
+    margin-left: 93%;
+    position: absolute;
+  }
