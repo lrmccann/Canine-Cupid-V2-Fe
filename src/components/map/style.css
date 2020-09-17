@@ -1,0 +1,21 @@
+	
+.map-container{
+	border: black solid 3px;
+	height: 100vh;
+	margin: auto;
+	margin-top: 7.5%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    max-height: 500px;
+	max-width: 650px;
+	z-index: 1
+ }
+ /* .marker {
+	background-image: url('../svg/marker.svg');
+	background-size: cover;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	cursor: pointer;
+  } */
