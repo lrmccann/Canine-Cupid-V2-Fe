@@ -1,10 +1,11 @@
 .header{
     border:solid black 1px;
     height: 145px;
-    width:100%;
-    background-color:pink ;
+    width:99%;
+    background: rgb(200,104,116);
+    background: linear-gradient(0deg, rgba(200,104,116,1) 25%, rgba(245,75,103,1) 80%);
     text-align:center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Crimson Text', serif;
     display: flex;
   }
   .title{
@@ -12,7 +13,10 @@
     margin-left: 42%;
     margin-top: 3.5%;
   }
-  
+  .header-text{
+    color: rgb(54, 54, 54);
+    font-size: 65px;
+  }
   .pic{
     height: 100px;
     width: 100px;

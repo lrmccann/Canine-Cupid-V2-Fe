@@ -1,7 +1,6 @@
 import React from "react"
 import "./style.css";
-import { MyProfileButton, MatchNowButton, MatchesButton, LogOutButton } from "../Button"
-
+import { MyProfileButton, MatchNowButton, MatchesButton, LogOutButton, LoginButton, SignupButton } from "../Button"
 
 
 export function Navbar() {
@@ -12,13 +11,6 @@ export function Navbar() {
     <MatchNowButton/>
     <MatchesButton/>
     <LogOutButton/>
-    </div>
-  );
-}
-
-export function NavbarNolinks() {
-  return (
-    <div className="navbar">
     </div>
   );
 }

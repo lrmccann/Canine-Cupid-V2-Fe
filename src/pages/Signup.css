@@ -50,3 +50,22 @@
     background-color:rgb(247, 230, 230);
     background-blend-mode: lighten;
   }
+
+  .login-modal .modal-content{
+    background-image: url("../dogsworld2.jpg");
+    background-color:rgb(247, 230, 230);
+    background-blend-mode: lighten;
+  }
+  
+.body {
+	background: url('https://thefreshtoast.com/wp-content/uploads/2017/02/10-reasons-why-your-dog-is-the-ideal-valentines-date.jpg');
+    background-size: cover;
+}
+
+.shader {
+  background-color: rgb(254, 254, 254);
+  background-color: rgba(254, 254, 254, 0.85);
+  padding: 15px;
+  margin-left: -15px;
+  border-radius: 5px;
+}
