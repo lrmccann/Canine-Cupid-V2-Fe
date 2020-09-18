@@ -56,22 +56,42 @@ export default {
         );
     },
 
-    getMatchesByName: async function(userData) {
-        console.log("API.getMatchesByName was called", userData)
+    getMatchesYesByName: async function(userData) {
+        console.log("API.getMatchesYesByName was called", userData)
         const token = getToken()
         // console.log("token",token)
         return await axios.get(
-            "https://canine-cupid.herokuapp.com/usersallmatches/"+userData,
+            "https://canine-cupid.herokuapp.com/usersallyesmatches/"+userData,
             { headers: {'session-token': token}}
         );
     },
 
-    setUsersMatches: async function(userData1,userData2) {
-        console.log("API.setUsersMatches was called", userData1, userData2)
+    getMatchesNoByName: async function(userData) {
+        console.log("API.getMatchesNoByName was called", userData)
+        const token = getToken()
+        // console.log("token",token)
+        return await axios.get(
+            "https://canine-cupid.herokuapp.com/usersallnomatches/"+userData,
+            { headers: {'session-token': token}}
+        );
+    },
+
+    setUsersYesMatches: async function(userData1,userData2) {
+        console.log("API.setUsersYesMatches was called", userData1, userData2)
         // const token = getToken()
         // console.log("token",token)
         return await axios.put(
-            "https://canine-cupid.herokuapp.com/usersmatches/"+userData1+"/"+userData2
+            "https://canine-cupid.herokuapp.com/usersyesmatches/"+userData1+"/"+userData2
+            //, { headers: {'session-token': token}}
+        );
+    },
+
+    setUsersNoMatches: async function(userData1,userData2) {
+        console.log("API.setUsersNoMatches was called", userData1, userData2)
+        // const token = getToken()
+        // console.log("token",token)
+        return await axios.put(
+            "https://canine-cupid.herokuapp.com/usersnomatches/"+userData1+"/"+userData2
             //, { headers: {'session-token': token}}
         );
     }

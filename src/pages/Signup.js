@@ -29,6 +29,7 @@ function Signup() {
 
   const [formObject, setFormObject] = useState({})
   console.log("formObject", formObject);
+  const [checkVaccinated, setCheckVaccinated] = useState("")
 
 
   async function getAllNames (sessionToken,arrYes) {
@@ -112,6 +113,8 @@ function Signup() {
           park: formObject.park,
           ball: formObject.ball,
           frisbee: formObject.frisbee,
+          vaccinated: formObject.vaccinated,
+          trained: formObject.trained,
           email: formObject.email,
           photoUrl: formObject.photoUrl,
           info: formObject.info
@@ -166,6 +169,14 @@ function Signup() {
                   />
                 </Col>
                 <Col size="md-4">
+                <Input
+                    onChange={handleInputChange}
+                    type="text"
+                    size="2000"
+                    label="URL to your Photograph: "
+                    name="userPhotoUrl"
+                    placeholder="URL to your Photograph"
+                  />
                   <Input
                     onChange={handleInputChange}
                     type="number"
@@ -222,11 +233,46 @@ function Signup() {
                     type="text"
                     size="2000"
                     label="URL to your Pet's Photograph: "
-                    name="photoUrl"
+                    name="petPhotoUrl"
                     placeholder="URL to your Pet's Photograph"
                   />
                 </Col>
                 <Col size="md-4">
+{/*///////////////////////////////////////////*/}
+                 {/* <InputGroup>
+                <InputGroup.Prepend>
+                <InputGroup.Radio aria-label="Radio button for following text input" />
+                </InputGroup.Prepend>
+                <FormControl aria-label="Text input with radio button" />
+                </InputGroup> */}
+{/* ///////////////////////////// */}
+        {/* <div className="radio" onChange={handleInputChange}>
+          <label > Vaccinated: 
+            <input
+              type="radio"
+              name="vaccinated"
+              value="true"
+              checked={(event)=> {setCheckVaccinated(event)}}
+              // checked={(event)=>
+              //   (setCheckVaccinated(checkVaccinated = event.target.value))}
+              // checked={true}
+              // onChange={handleInputChange}
+            />
+            Yes
+            <input
+              type="radio"
+              name="vaccinated"
+              value="false"
+              checked={(event)=>
+                (setCheckVaccinated(checkVaccinated = event.target.value))}
+              // checked={false}
+              // checked="vaccinatedNo"
+              // onChange={handleInputChange}
+            />
+            No
+          </label>
+        </div> */}
+{/*///////////////////////////////////////////*/}
                   <p>Your Pet's Interests:</p>
                   <Checkbox
                     onChange={handleInputChange}

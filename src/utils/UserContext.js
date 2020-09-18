@@ -12,8 +12,11 @@ const UserContext = React.createContext(
     // park: "",
     // ball: "",
     // frisbee: "",
+    // vaccinated: "",
+    // trained: "",
     // email: "",
-    // photoUrl: "",
+    // petPhotoUrl: "",
+    // userPhotoUrl: "",
     // info: "",
     // date: ""
 // }
