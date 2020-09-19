@@ -17,7 +17,7 @@ export default {
     saveUser: async function(userData) {
         console.log("API.saveUser was called", userData)
         return await axios.post(
-            "https://canine-cupid.herokuapp.com/users", userData
+            "https://canine-cupid-v2.herokuapp.com/users", userData
         );
     },
     
@@ -25,7 +25,7 @@ export default {
     checkUser: async function(userData) {
         console.log("API.getUser was called", userData)
         return await axios.get(
-            "https://canine-cupid.herokuapp.com/users/"+userData.userName+"/"+userData.password
+            "https://canine-cupid-v2.herokuapp.com/users/"+userData.userName+"/"+userData.password
         );
     },
 
@@ -34,7 +34,7 @@ export default {
         const token = getToken()
         console.log("token",token)
         return await axios.get(
-            "https://canine-cupid.herokuapp.com/user/"+userData, 
+            "https://canine-cupid-v2.herokuapp.com/user/"+userData, 
             { headers: {'session-token': token}}
         );
     },    
@@ -43,7 +43,7 @@ export default {
         console.log("API.updateUser was called", userDataName)
         const token = getToken()
         return await axios.put(
-            "https://canine-cupid.herokuapp.com/user/"+userDataName, userData,
+            "https://canine-cupid-v2.herokuapp.com/user/"+userDataName, userData,
             { headers: {'session-token': token}}
         );
     },
@@ -51,7 +51,7 @@ export default {
     getAllUsers: async function(sessionToken){
         console.log("API.getAllUsers was called", sessionToken)
         return await axios.get(
-            "https://canine-cupid.herokuapp.com/users", 
+            "https://canine-cupid-v2.herokuapp.com/users", 
             { headers: {'session-token': sessionToken}}
         );
     },
@@ -61,7 +61,7 @@ export default {
         const token = getToken()
         // console.log("token",token)
         return await axios.get(
-            "https://canine-cupid.herokuapp.com/usersallyesmatches/"+userData,
+            "https://canine-cupid-v2.herokuapp.com/usersallyesmatches/"+userData,
             { headers: {'session-token': token}}
         );
     },
@@ -71,7 +71,7 @@ export default {
         const token = getToken()
         // console.log("token",token)
         return await axios.get(
-            "https://canine-cupid.herokuapp.com/usersallnomatches/"+userData,
+            "https://canine-cupid-v2.herokuapp.com/usersallnomatches/"+userData,
             { headers: {'session-token': token}}
         );
     },
@@ -81,7 +81,7 @@ export default {
         // const token = getToken()
         // console.log("token",token)
         return await axios.put(
-            "https://canine-cupid.herokuapp.com/usersyesmatches/"+userData1+"/"+userData2
+            "https://canine-cupid-v2.herokuapp.com/usersyesmatches/"+userData1+"/"+userData2
             //, { headers: {'session-token': token}}
         );
     },
@@ -91,7 +91,7 @@ export default {
         // const token = getToken()
         // console.log("token",token)
         return await axios.put(
-            "https://canine-cupid.herokuapp.com/usersnomatches/"+userData1+"/"+userData2
+            "https://canine-cupid-v2.herokuapp.com/usersnomatches/"+userData1+"/"+userData2
             //, { headers: {'session-token': token}}
         );
     }
