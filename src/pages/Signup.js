@@ -7,6 +7,7 @@ import { Input, Checkbox, TextArea, FormBtn } from "../components/Form";
 import Navbar from "../components/Navbar";
 import Modal from 'react-bootstrap/Modal';
 import { ModalButton } from "../components/Button";
+import RadioButton from "../components/RadioButton"
 import "./Signup.css"
 
 function Signup() {
@@ -14,7 +15,12 @@ function Signup() {
   const { getData, getAllUsersNames } = useContext(UserContext)
   const history = useHistory();
   const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
-  
+   ///////////////////+++++++++++++++++////////////////////
+  const [checkVaccinated, setCheckVaccinated] = useState("")
+  console.log("checkVaccinated", checkVaccinated);
+  const [checkTrained, setCheckTrained] = useState("")
+  console.log("checkTrained", checkTrained);
+   
   ////////////// Code for Modal //////
   const [isOpen, setIsOpen] = useState(false);
   const [isErrorMessage, setIsErrorMessage] = useState();
@@ -29,8 +35,6 @@ function Signup() {
 
   const [formObject, setFormObject] = useState({})
   console.log("formObject", formObject);
-  const [checkVaccinated, setCheckVaccinated] = useState("")
-
 
   async function getAllNames (sessionToken,arrYes) {
     console.log("getAllNames")
@@ -113,10 +117,11 @@ function Signup() {
           park: formObject.park,
           ball: formObject.ball,
           frisbee: formObject.frisbee,
-          vaccinated: formObject.vaccinated,
-          trained: formObject.trained,
+          vaccinated: checkVaccinated,
+          trained: checkTrained,
           email: formObject.email,
-          photoUrl: formObject.photoUrl,
+          petPhotoUrl: formObject.petPhotoUrl,
+          userPhotoUrl: formObject.userPhotoUrl,          
           info: formObject.info
         }
       })
@@ -127,40 +132,45 @@ function Signup() {
   
   return (
     <div>
-      <h2 style={{ fontFamily: "Georgia, serif" , margin: "2.5% 0 0 44%" }}>Sign Up</h2>
+      <Navbar />
+      <h2 style={{ fontFamily: "Georgia, serif" , margin: "0 0 0 48%" }}>Sign Up</h2>
       <div style={{ border: "solid black 1px", margin: "4% 10% 5% 10%" }}></div>
       <Container fluid>
         <form>
-          <div className="userDetails" style={{background: "linear-gradient(0deg, rgba(200,104,116,1) 25%, rgba(245,75,103,1) 80%)"}}>
+          <div className="userDetails">
             <div className="content">
-            <h2 style={{marginLeft: "2%" , float:"left" }}>User Details</h2><p style={{marginLeft: "85%", marginBottom:"5%"}}>* Required Fields</p>
               <Row>
+                <h3>Your Details:</h3>
                 <Col size="md-4">
-                <Input
+                  <Input
+                    defaultValue=""
                     onChange={handleInputChange}
-                    type="email"
+                    type="text"
+                    minLength="5"
+                    maxLength="20"
                     size="40"
-                    label="Email &nbsp;&nbsp; *"
-                    name="email"
-                    placeholder="Email format required"
+                    label="User Name (Required): "
+                    name="userName"
+                    placeholder="User Name (5-20 characters required)"
                   />
-                    <Input
+                  <Input
                     defaultValue=""
                     onChange={handleInputChange}
                     type="password"
                     minLength="5"
                     maxLength="20"
                     size="40"
-                    label="Password &nbsp;&nbsp; * "
+                    label="Password (Required): "
                     name="password"
-                    placeholder="5-20 characters required"
+                    placeholder="Password (5-20 characters required)"
                   />
-                    <Input
+                  <Input
                     onChange={handleInputChange}
-                    type="text"
+                    type="email"
                     size="40"
-                    label="City: "
-                    name="city"
+                    label="Email (Required):"
+                    name="email"
+                    placeholder="Email (Required and in email format)"
                   />
                 </Col>
                 <Col size="md-4">
@@ -174,69 +184,80 @@ function Signup() {
                   />
                   <Input
                     onChange={handleInputChange}
-                    type="text"
-                    minLength="5"
-                    maxLength="20"
-                    size="40"
-                    fontWeight="bolder"
-                    label="User Name &nbsp;&nbsp; * "
-                    name="userName"
-                    placeholder="5-20 characters required"
-                  />
-                    <Input
-                    onChange={handleInputChange}
                     type="number"
                     size="10"
-                    label="Zipcode "
+                    label="Zipcode: "
                     name="zipCode"
+                    placeholder="Zipcode"
+                  />
+                  <Input
+                    onChange={handleInputChange}
+                    type="text"
+                    size="40"
+                    label="City: "
+                    name="city"
+                    placeholder="City"
                   />
                 </Col>
               </Row>
             </div>
           </div>
-          <div className="petDetails" style={{background: "linear-gradient(0deg, rgba(200,104,116,1) 25%, rgba(245,75,103,1) 80%)"}}>
+          <div className="petDetails">
             <div className="content">
-            <h2 style={{marginLeft: "2%" , marginBottom: "3%", float: "left"}}>Pet's Details</h2><p style={{marginLeft: "85%", marginBottom:"5%"}}>* Required Fields</p>
               <Row>
+                <h3>Your Pet's Details:</h3>
                 <Col size="md-4">
                   <Input
                     onChange={handleInputChange}
                     type="text"
                     size="40"
-                    label="Pet's Name &nbsp;&nbsp; * "
+                    label="Your Pet's Name (Required): "
                     name="petName"
+                    placeholder="Your Pet's Name (Required)"
                   />
                   <Input
                     onChange={handleInputChange}
                     type="text"
                     maxLength="50"
                     size="40"
-                    label="Pet's Breed &nbsp;&nbsp; * "
+                    label="Your Pet's Breed: "
                     name="breed"
+                    placeholder="Your Pet's Breed"
                   />
                   <Input
                     onChange={handleInputChange}
                     type="number"
                     maxLength="3"
                     size="40"
-                    label="Pet's Age (in years) "
+                    label="Your Pet's Age in years: "
                     name="age"
+                    placeholder="Your Pet's Age"
                   />
                   <Input
                     onChange={handleInputChange}
                     type="text"
                     size="2000"
-                    label="URL to your pet's Photo "
-                    name="photoUrl"
+                    label="URL to your Pet's Photograph: "
+                    name="petPhotoUrl"
+                    placeholder="URL to your Pet's Photograph"
                   />
                 </Col>
                 <Col size="md-4">
-                  <h4 style={{fontWeight:"bolder", marginBottom: "6%"}}>Your Pet's Interests:</h4>
-                  <Checkbox
+                  <RadioButton
+                    radioLabel = "Vaccinated:"
+                    radioName = "vaccinated"
+                    onChange={(event)=>setCheckVaccinated(event.target.value)}
+                  />
+                   <RadioButton
+                    radioLabel = "Trained:"
+                    radioName = "trained"
+                    onChange={(event)=>setCheckTrained(event.target.value)}
+                  />
+                  <p>Your Pet's Interests:</p>
+                  {/* <Checkbox
                     onChange={handleInputChange}
                     label="Playing in the Park:  "
                     name="park"
-                    fontWeight="bolder"
                   />
                   <Checkbox
                     onChange={handleInputChange}
@@ -247,12 +268,13 @@ function Signup() {
                     onChange={handleInputChange}
                     label="Playing with a Frisbee:  "
                     name="frisbee"
-                  />
+                  /> */}
                   <TextArea
                     onChange={handleInputChange}
                     label="Additional Information about your Pet: "
                     name="info"
                     rows="8"
+                    placeholder="Additional Information about your Pet"
                   />
                 </Col>
               </Row>
