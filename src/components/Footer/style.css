@@ -1,11 +1,15 @@
 .footer {
-  min-height: 100px;
+  height: 55px;
   background-color: #8ABAD3FF;
   position: relative;
-  margin-top:8% ;
+  text-align: center;
+  padding-top: .5%;
+  background: rgb(255,89,89);
+  background: linear-gradient(0deg, rgba(255,89,89,1) 0%, rgba(245,159,159,1) 100%);
+
 }
 
-.footer span {
+/* .footer span {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -13,7 +17,7 @@
   padding: 3px;
   background-color:pink;
   text-align: center;
-}
+} */
 
 .textAlt{
   font-size: 25px;

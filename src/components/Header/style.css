@@ -1,31 +1,32 @@
 .header{
-    border:solid black 1px;
-    height: 145px;
-    width:100%;
-    background-color:pink ;
-    text-align:center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    display: flex;
-  }
-  .title{
-    position: absolute;
-    margin-left: 42%;
-    margin-top: 3.5%;
-  }
-  
-  .pic{
-    height: 100px;
-    width: 100px;
-  }
-  
-  .picDiv{
-    margin-top: 2%;
-    margin-left: 2%;
-    position: absolute;
-  }
-  
-  .picDivTwo{
-    margin-top: 2%;
-    margin-left: 93%;
-    position: absolute;
-  }
+  height: 145px;
+  width:99%;
+  background-color: white;
+  border: solid black 1px ;
+  text-align:center;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+}
+.title{
+  position: absolute;
+  margin-left: 34.5%;
+  margin-top: 2%;
+  font-size: 70px;
+  color: rgb(245, 42, 42);
+}
+.pic{
+  height: 100px;
+  width: 100px;
+}
+
+.picDiv{
+  margin-top: 2%;
+  margin-left: 2%;
+  position: absolute;
+}
+
+.picDivTwo{
+  margin-top: 2%;
+  margin-left: 93%;
+  position: absolute;
+}

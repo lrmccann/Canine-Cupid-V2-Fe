@@ -26,12 +26,16 @@
     background-color:pink;
 }
 
-
-/* .bluebtn{
-    background-color: #8ABAD3FF;
-} */
-
-/* .pinkbtn{
-    background-color:pink;
-} */
-
+.appbtnpink-1{
+    height: 45px;
+    width: 150px;
+    border: 1px solid black;
+    float: right;
+    margin-right: 27.5%;
+    margin-top:4%;
+    margin-bottom: 3%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+}
