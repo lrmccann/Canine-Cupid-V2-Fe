@@ -127,45 +127,40 @@ function Signup() {
   
   return (
     <div>
-      <Navbar />
-      <h2 style={{ fontFamily: "Georgia, serif" , margin: "0 0 0 48%" }}>Sign Up</h2>
+      <h2 style={{ fontFamily: "Georgia, serif" , margin: "2.5% 0 0 44%" }}>Sign Up</h2>
       <div style={{ border: "solid black 1px", margin: "4% 10% 5% 10%" }}></div>
       <Container fluid>
         <form>
-          <div className="userDetails">
+          <div className="userDetails" style={{background: "linear-gradient(0deg, rgba(200,104,116,1) 25%, rgba(245,75,103,1) 80%)"}}>
             <div className="content">
+            <h2 style={{marginLeft: "2%" , float:"left" }}>User Details</h2><p style={{marginLeft: "85%", marginBottom:"5%"}}>* Required Fields</p>
               <Row>
-                <h3>Your Details:</h3>
                 <Col size="md-4">
-                  <Input
-                    defaultValue=""
+                <Input
                     onChange={handleInputChange}
-                    type="text"
-                    minLength="5"
-                    maxLength="20"
+                    type="email"
                     size="40"
-                    label="User Name (Required): "
-                    name="userName"
-                    placeholder="User Name (5-20 characters required)"
+                    label="Email &nbsp;&nbsp; *"
+                    name="email"
+                    placeholder="Email format required"
                   />
-                  <Input
+                    <Input
                     defaultValue=""
                     onChange={handleInputChange}
                     type="password"
                     minLength="5"
                     maxLength="20"
                     size="40"
-                    label="Password (Required): "
+                    label="Password &nbsp;&nbsp; * "
                     name="password"
-                    placeholder="Password (5-20 characters required)"
+                    placeholder="5-20 characters required"
                   />
-                  <Input
+                    <Input
                     onChange={handleInputChange}
-                    type="email"
+                    type="text"
                     size="40"
-                    label="Email (Required):"
-                    name="email"
-                    placeholder="Email (Required and in email format)"
+                    label="City: "
+                    name="city"
                   />
                 </Col>
                 <Col size="md-4">
@@ -179,105 +174,69 @@ function Signup() {
                   />
                   <Input
                     onChange={handleInputChange}
+                    type="text"
+                    minLength="5"
+                    maxLength="20"
+                    size="40"
+                    fontWeight="bolder"
+                    label="User Name &nbsp;&nbsp; * "
+                    name="userName"
+                    placeholder="5-20 characters required"
+                  />
+                    <Input
+                    onChange={handleInputChange}
                     type="number"
                     size="10"
-                    label="Zipcode: "
+                    label="Zipcode "
                     name="zipCode"
-                    placeholder="Zipcode"
-                  />
-                  <Input
-                    onChange={handleInputChange}
-                    type="text"
-                    size="40"
-                    label="City: "
-                    name="city"
-                    placeholder="City"
                   />
                 </Col>
               </Row>
             </div>
           </div>
-          <div className="petDetails">
+          <div className="petDetails" style={{background: "linear-gradient(0deg, rgba(200,104,116,1) 25%, rgba(245,75,103,1) 80%)"}}>
             <div className="content">
+            <h2 style={{marginLeft: "2%" , marginBottom: "3%", float: "left"}}>Pet's Details</h2><p style={{marginLeft: "85%", marginBottom:"5%"}}>* Required Fields</p>
               <Row>
-                <h3>Your Pet's Details:</h3>
                 <Col size="md-4">
                   <Input
                     onChange={handleInputChange}
                     type="text"
                     size="40"
-                    label="Your Pet's Name (Required): "
+                    label="Pet's Name &nbsp;&nbsp; * "
                     name="petName"
-                    placeholder="Your Pet's Name (Required)"
                   />
                   <Input
                     onChange={handleInputChange}
                     type="text"
                     maxLength="50"
                     size="40"
-                    label="Your Pet's Breed: "
+                    label="Pet's Breed &nbsp;&nbsp; * "
                     name="breed"
-                    placeholder="Your Pet's Breed"
                   />
                   <Input
                     onChange={handleInputChange}
                     type="number"
                     maxLength="3"
                     size="40"
-                    label="Your Pet's Age in years: "
+                    label="Pet's Age (in years) "
                     name="age"
-                    placeholder="Your Pet's Age"
                   />
                   <Input
                     onChange={handleInputChange}
                     type="text"
                     size="2000"
-                    label="URL to your Pet's Photograph: "
-                    name="petPhotoUrl"
-                    placeholder="URL to your Pet's Photograph"
+                    label="URL to your pet's Photo "
+                    name="photoUrl"
                   />
                 </Col>
                 <Col size="md-4">
-{/*///////////////////////////////////////////*/}
-                 {/* <InputGroup>
-                <InputGroup.Prepend>
-                <InputGroup.Radio aria-label="Radio button for following text input" />
-                </InputGroup.Prepend>
-                <FormControl aria-label="Text input with radio button" />
-                </InputGroup> */}
-{/* ///////////////////////////// */}
-        {/* <div className="radio" onChange={handleInputChange}>
-          <label > Vaccinated: 
-            <input
-              type="radio"
-              name="vaccinated"
-              value="true"
-              checked={(event)=> {setCheckVaccinated(event)}}
-              // checked={(event)=>
-              //   (setCheckVaccinated(checkVaccinated = event.target.value))}
-              // checked={true}
-              // onChange={handleInputChange}
-            />
-            Yes
-            <input
-              type="radio"
-              name="vaccinated"
-              value="false"
-              checked={(event)=>
-                (setCheckVaccinated(checkVaccinated = event.target.value))}
-              // checked={false}
-              // checked="vaccinatedNo"
-              // onChange={handleInputChange}
-            />
-            No
-          </label>
-        </div> */}
-{/*///////////////////////////////////////////*/}
-                  <p>Your Pet's Interests:</p>
+                  <h4 style={{fontWeight:"bolder", marginBottom: "6%"}}>Your Pet's Interests:</h4>
                   <Checkbox
                     onChange={handleInputChange}
                     label="Playing in the Park:  "
                     name="park"
+                    fontWeight="bolder"
                   />
                   <Checkbox
                     onChange={handleInputChange}
@@ -294,7 +253,6 @@ function Signup() {
                     label="Additional Information about your Pet: "
                     name="info"
                     rows="8"
-                    placeholder="Additional Information about your Pet"
                   />
                 </Col>
               </Row>

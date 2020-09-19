@@ -7,7 +7,7 @@
     margin-right: 100px;
     border-radius: 10px;
     font-size: 25px;
-    background-color: rgb(121, 163, 255);
+    background-color: rgb(227, 227, 230);
 }
 
 .messagebutton{
@@ -47,11 +47,20 @@
     background-color:pink;
 }
 
-/* .bluebtn{
-    background-color: #8ABAD3FF;
-}
+.LoginModalButton{
+        border: none;
+        display: inline-block;
+        padding: 8px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        background-color: inherit;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap
+      }
 
-.pinkbtn{
-    background-color:pink;
-} */
-
+/* .pinkbtn{
+    background-color:pink; */
+/* } */

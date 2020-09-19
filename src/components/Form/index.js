@@ -6,7 +6,7 @@ import "./style.css";
 export function Input(props) {
   return (
     <div className="form-group">
-      <label htmlFor={props.label}>{props.label}</label>
+      <label style={{fontWeight:"bolder"}} htmlFor={props.label}>{props.label}</label>
       <input className="form-control" {...props} />
     </div>
   );
@@ -16,11 +16,10 @@ export function Checkbox(props) {
   return (
     <div className="form-group">
       <label htmlFor={props.label}>{props.label}</label>
-      <input type="checkbox" {...props}/>     
+      <input style={{marginLeft: "3%"}} type="checkbox" {...props}/>     
     </div>
   );
 }
-
 
 export function TextArea(props) {
   return (
@@ -36,9 +35,7 @@ export function TextArea(props) {
 export function FormBtn(props) {
   return (
     <button {...props}
-    //  style={{ float: "right", marginBottom: 10 }}
-    //  className="btn btn-success">
-     className="appbtnpink">
+     className="appbtnpink-1">
       {props.children}
     </button>
   );

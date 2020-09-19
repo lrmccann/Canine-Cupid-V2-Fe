@@ -32,14 +32,21 @@ export function ModalButton(props) {
 export function LoginButton(props) {
     return (
         <button 
-        style={{ float: "left", marginBottom: 10 }} 
-        className="appbtnblue"
-        {...props}>
+        onClick={props.onClick}
+        style={props}
+        >
             Log In
         </button>
     );
 }
-
+export function LoginModalButton(props) {
+    return ( 
+        <button
+            className="LoginModalButton topright" {...props}>
+            X
+        </button>
+    );
+};
 export function SignupButton(props) {
     return (
         <button 
