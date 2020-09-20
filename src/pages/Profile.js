@@ -13,17 +13,29 @@ let Profile = () => {
     const { user } = useContext(UserContext)
     console.log("user profile page",user);
 
-    let interests="";
-    if ('park' in user && user.park === "on")
-    {
-        interests = interests + "Playing in the Park. "
+    let interests = "";
+    let vaccinated = "";
+    let trained = "";
+
+    // if ('park' in user && user.park === "on")
+    if (user.vaccinated === true){
+        vaccinated = "Yes" 
+    } else if (user.vaccinated === false){
+        vaccinated = "No"
     }
-    if ('ball' in user && user.ball === "on"){
-        interests = interests + "Playing with a ball. "
+
+    if (user.trained === true){
+        trained = "Yes" 
+    } else if (user.trained === false){
+        trained = "No"
     }
-    if ('frisbee' in user && user.frisbee === "on"){
-        interests = interests + "Playing with a frisbee. "
-    }
+    
+    if (user.park === true)
+        { interests = interests + "Playing in the Park. " }
+    if (user.ball === true)
+        { interests = interests + "Playing with a ball. " }
+    if (user.frisbee === true)
+        { interests = interests + "Playing with a frisbee. " }
 
 
     let readableDate = <Moment format="YYYY/MM/DD">{user.date}</Moment>
@@ -37,9 +49,11 @@ let Profile = () => {
                 <Row-fluid>
                     <Col size="md-12">                        
                         <Card petName={user.petName} photoUrl={user.photoUrl}>
-                        <div style={{marginTop:"1%", marginLeft:"5%"}}>Pet name: &nbsp;{user.petName}</div> 
-                        <div style={{marginTop:"5%", marginLeft:"5%"}}>Breed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.breed}</div> 
-                        <div style={{marginTop:"5%", marginLeft:"5%"}}>Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.age}</div>
+                        <div style={{marginTop:"1%", marginLeft:"5%"}}>Pet name: &nbsp;&nbsp;{user.petName}</div> 
+                        <div style={{marginTop:"5%", marginLeft:"5%"}}>Breed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.breed}</div> 
+                        <div style={{marginTop:"5%", marginLeft:"5%"}}>Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.age}</div>
+                        <div style={{marginTop:"5%", marginLeft:"5%"}}>Vaccinated: {vaccinated}</div>
+                        <div style={{marginTop:"5%", marginLeft:"5%"}}>Trained: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{trained}</div>
                         </Card>
                     </Col>
                 </Row-fluid>
@@ -50,7 +64,8 @@ let Profile = () => {
                     <div style={{paddingTop: "3%"}} >Location: &nbsp;&nbsp;&nbsp;&nbsp;{user.city}</div>
                     <div style={{paddingTop: "3%"}}>Zip Code: &nbsp;&nbsp;&nbsp;&nbsp;{user.zipCode} </div>
                     <div style={{paddingTop: "3%"}}>Join Date: &nbsp;&nbsp;&nbsp;{readableDate}</div>
-                    <div style={{paddingTop: "3%"}}>About my pet: &nbsp;&nbsp;{user.info}</div>
+                    {/* <div style={{paddingTop: "3%"}}>About my pet: &nbsp;&nbsp;{user.info}</div> */}
+                    <div style={{paddingTop: "3%"}}>About my pet: &nbsp;{interests}</div>
                     <EditProfileButton/>
                     </ProfDetails>
                     </Col>
