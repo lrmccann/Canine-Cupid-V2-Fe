@@ -9,9 +9,9 @@ return (
         <div className="radio"
         >
         {/* <label > Vaccinated: </label> */}
-        <label > {props.radioLabel} </label>
+        <label > {props.radioLabel} &nbsp;&nbsp; </label>
 
-        Yes
+        Yes&nbsp;&nbsp;
         <input
         type="radio"
         // name="vaccinated"
@@ -20,7 +20,7 @@ return (
         onChange={props.onChange}
         />
 
-        No
+        &nbsp;&nbsp;No&nbsp;&nbsp;
         <input
         type="radio"
         // name="vaccinated"

@@ -15,11 +15,18 @@ function Signup() {
   const { getData, getAllUsersNames } = useContext(UserContext)
   const history = useHistory();
   const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
-   ///////////////////+++++++++++++++++////////////////////
-  const [checkVaccinated, setCheckVaccinated] = useState("")
+  ///////////////////+++++++++++++++++////////////////////
+  const [checkVaccinated, setCheckVaccinated] = useState(false) 
+  const [checkTrained, setCheckTrained] = useState(false)
+  const [checkPark, setCheckPark] = useState(false) 
+  const [checkBall, setCheckBall] = useState(false) 
+  const [checkFrisbee, setCheckFrisbee] = useState(false)
+
   console.log("checkVaccinated", checkVaccinated);
-  const [checkTrained, setCheckTrained] = useState("")
   console.log("checkTrained", checkTrained);
+  console.log("checkPark", checkPark);
+  console.log("checkBall", checkBall);
+  console.log("checkFrisbee", checkFrisbee);
    
   ////////////// Code for Modal //////
   const [isOpen, setIsOpen] = useState(false);
@@ -114,9 +121,9 @@ function Signup() {
           city: formObject.city,
           breed: formObject.breed,
           age: formObject.age,
-          park: formObject.park,
-          ball: formObject.ball,
-          frisbee: formObject.frisbee,
+          park: checkPark,
+          ball: checkBall,
+          frisbee: checkFrisbee,
           vaccinated: checkVaccinated,
           trained: checkTrained,
           email: formObject.email,
@@ -241,19 +248,49 @@ function Signup() {
                     name="petPhotoUrl"
                     placeholder="URL to your Pet's Photograph"
                   />
-                </Col>
-                <Col size="md-4">
                   <RadioButton
                     radioLabel = "Vaccinated:"
                     radioName = "vaccinated"
                     onChange={(event)=>setCheckVaccinated(event.target.value)}
                   />
-                   <RadioButton
+                  <RadioButton
                     radioLabel = "Trained:"
                     radioName = "trained"
                     onChange={(event)=>setCheckTrained(event.target.value)}
                   />
+                </Col>
+                <Col size="md-4">               
                   <p>Your Pet's Interests:</p>
+                  <label>
+                    Playing in the park :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input
+                      type="checkbox"
+                      name="park"                      
+                      checked={checkPark}
+                      onChange={(event)=>setCheckPark(event.target.checked)}      
+                      // checked={state.park}                
+                      // onChange={handleChange}
+                      // onChange={(event)=>setCheckPark(event.target.value)}
+                    />
+                  </label>
+                  <label>
+                    Playing with a ball :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input
+                      type="checkbox"
+                      name="ball"                      
+                      checked={checkBall}
+                      onChange={(event)=>setCheckBall(event.target.checked)} 
+                    />
+                  </label>
+                  <label>
+                    Playing with a frisbee :&nbsp;
+                    <input
+                      type="checkbox"
+                      name="frisbee"                      
+                      checked={checkFrisbee}
+                      onChange={(event)=>setCheckFrisbee(event.target.checked)} 
+                    />
+                  </label>
                   {/* <Checkbox
                     onChange={handleInputChange}
                     label="Playing in the Park:  "
