@@ -17,7 +17,11 @@ export default function MatchCards(props) {
     }, [setIsLoading, props.length]
     )
     if (isLoading) {
-        return <div>Loading</div>
+        return (
+        <div>
+            <h1>No Current Matches</h1>
+        </div>
+        )
     } if (!isLoading) {
         return (
             <div className="Container fixed">

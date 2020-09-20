@@ -9,10 +9,10 @@ function Header(props) {
       <div className="picDiv">
         <img className="pic" alt="cupidog" src={require("./images/dog-cupid.png")}></img>
       </div>
-      <h1 className="title">Canine Cupid</h1>
-      <div className="picDivTwo">
+      {/* <h1 className="title">Canine Cupid</h1> */}
+      {/* <div className="picDivTwo">
         <img className="pic" alt="cupidog"  src={require("./images/dog-cupid.png")}></img>
-      </div>
+      </div> */}
     </header>
     </div>
   );

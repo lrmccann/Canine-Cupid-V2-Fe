@@ -63,7 +63,7 @@ let Matchnow = () => {
     }
 
     async function setNewMatches (name1, name2){
-        await API.setUsersMatches(name1, name2)
+        await API.setUsersYesMatches(name1, name2)
         .then((response) => {console.log(response)})
     }
 

@@ -71,7 +71,7 @@ let Profile = () => {
                     </Col>
                 </Row>
                  <Col size="md-12">
-                    <h1 className="mapText" style={{marginTop:"7.5%", marginLeft: "33.5%"}}>Pet-friendly parks near you</h1>
+                    <h1 className="mapText" style={{marginTop:"7.5%"}}>Pet-friendly parks near you</h1>
                     <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%" }}></div>
                 </Col>
                 <Map />

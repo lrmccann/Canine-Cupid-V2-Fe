@@ -1,9 +1,8 @@
 .profDetails{
     border: solid 1px black;
-    border-radius: 10px;
     padding: 5px;
     height: 450px;
-    background-color: #8ABAD3FF;
+    background-color: white;
     width:100%;
     margin-left: 11.5%;
 }
@@ -11,6 +10,7 @@
 .profDetails > .content {
     padding: 15px;
     color:black;
+    font-weight: bolder;
 }
 
 .profDetails > .content > h4{

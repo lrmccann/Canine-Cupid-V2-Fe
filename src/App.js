@@ -8,7 +8,6 @@ import Matchnow from "./pages/Matchnow";
 import Matches from "./pages/Matches";
 // import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollTop";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Text from "./components/MyText"
@@ -79,7 +78,6 @@ function App() {
       <Router>
       {/* <Navbar sticky="top"/> */}
       {/* <Text> */}
-        <Header />
          {/* <Wrapper>  */}
           <Route exact activeClassName path="/" component={Login} />
           <Route exact activeClassName  path="/login" component={Login} />

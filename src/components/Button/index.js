@@ -65,7 +65,7 @@ export function EditProfileButton() {
     }
     return (
         <button style={{marginLeft:"22%"}}
-            className="appbtnpink"
+            className="editProfile"
             onClick={handleClick} >
             Edit Profile
         </button>
@@ -123,7 +123,7 @@ export function MatchesButton() {
     const history = useHistory();
     let newVar = user
     const getUserDataById = async () => {
-        await API.getMatchesByName(newVar.userName)
+        await API.getMatchesYesByName(newVar.userName)
         .then(response => getAllMatchesForMatchesPage(response.data))
         
     }

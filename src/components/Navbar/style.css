@@ -83,14 +83,25 @@ align-content: space-between;
 
 
 /* ------------------------------------- */
-/* .navbarnolinks {
+.navbar-login {
   overflow: hidden;
-  background-color: #8ABAD3FF;
-  font-family: Arial;
+  background-color: white;
   height: 50px;
-  margin-bottom: 4%;
-  width: 100%;
-  } */
+  margin-top: 1%;
+  }
+
+  .nav-bar-login{
+    height:40px;
+    width:130px;
+    border:1px solid black;
+    float:right;
+    font-size:20px;
+    margin-right:.2%;
+    margin-top:.28%;
+    font-weight:bold;
+    color:black;
+    background-color:white;
+  }
 
 
 
