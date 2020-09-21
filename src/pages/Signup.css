@@ -46,27 +46,32 @@
 
  .my-modal .modal-content {
     background-image: url("../dog-world-2.png");
-    background-color:rgb(247, 230, 230);
+    background-color:rgb(232, 86, 86);
     background-blend-mode: lighten;
   }
 
   .login-modal .modal-content{
     background-image: url("../dog-world-2.png");
-    background-color:rgb(247, 230, 230);
+    background-color:rgb(232, 86, 86);
     background-blend-mode: lighten;
   }
   
-.body {
-	background: url('https://thefreshtoast.com/wp-content/uploads/2017/02/10-reasons-why-your-dog-is-the-ideal-valentines-date.jpg');
-    background-size: cover;
-}
-
-.shader {
-  background-color: rgb(254, 254, 254);
-  background-color: rgba(254, 254, 254, 0.85);
+.login-content {
+  background-color: rgb(255, 255, 255);
   padding: 15px;
   margin-left: -15px;
-  border-radius: 5px;
+  border-radius: 0 10px 10px 0;
+}
+.login-page-content{
+    background-color:rgb(232, 86, 86) ;
+}
+.aboutUs-page-content{
+    background-color:rgb(232, 86, 86) ;
+}
+
+.login-image{
+    height: 650px;
+    opacity: 90%;
 }
 
 .container-1{
@@ -74,14 +79,6 @@
     width:100%;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 80px 1fr auto;
-    grid-template-rows: 80px auto;
-    grid-template-areas:
-      "logo   topbar  topbar"
-      "navi   main    sidebar";
-    min-height: 100vh;
-    margin: 0;
-    color: white;
-  }
+.login-text{
+    margin-left: 4%;
+}

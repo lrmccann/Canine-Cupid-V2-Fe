@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import aboutUs from "./pages/AboutUs";
 import EditProfile from "./pages/EditProfile";
 import Signup from "./pages/Signup";
 import Matchnow from "./pages/Matchnow";
 import Matches from "./pages/Matches";
 // import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollTop";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Text from "./components/MyText"
@@ -79,11 +79,10 @@ function App() {
       <Router>
       {/* <Navbar sticky="top"/> */}
       {/* <Text> */}
-        <Header />
          {/* <Wrapper>  */}
           <Route exact activeClassName path="/" component={Login} />
           <Route exact activeClassName  path="/login" component={Login} />
-          
+          <Route exact activeClassName path="/aboutus" component={aboutUs} />
           <Route exact activeClassName  path="/signup" component={Signup} />
           <ScrollToTop>
             <Switch>

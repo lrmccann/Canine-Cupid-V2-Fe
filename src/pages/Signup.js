@@ -139,45 +139,41 @@ function Signup() {
   
   return (
     <div>
-      <Navbar />
-      <h2 style={{ fontFamily: "Georgia, serif" , margin: "0 0 0 48%" }}>Sign Up</h2>
+      <h2 style={{ fontFamily: "Georgia, serif" , margin: "2.5% 0 0 44%" , fontSize:"50px" }}>Sign Up</h2>
       <div style={{ border: "solid black 1px", margin: "4% 10% 5% 10%" }}></div>
       <Container fluid>
         <form>
-          <div className="userDetails">
+          <div className="userDetails" style={{backgroundColor: "white"}}>
             <div className="content">
               <Row>
-                <h3>Your Details:</h3>
+              <h2 style={{marginLeft: "2%" , float:"left" }}>User Details</h2><p style={{marginLeft: "85%", marginBottom:"2%"}}>* Required Fields</p>
                 <Col size="md-4">
                   <Input
-                    defaultValue=""
                     onChange={handleInputChange}
                     type="text"
                     minLength="5"
                     maxLength="20"
                     size="40"
-                    label="User Name (Required): "
+                    fontWeight="bolder"
+                    label="User Name &nbsp;&nbsp; * "
                     name="userName"
-                    placeholder="User Name (5-20 characters required)"
-                  />
-                  <Input
-                    defaultValue=""
-                    onChange={handleInputChange}
-                    type="password"
-                    minLength="5"
-                    maxLength="20"
-                    size="40"
-                    label="Password (Required): "
-                    name="password"
-                    placeholder="Password (5-20 characters required)"
+                    placeholder="5-20 characters required"
                   />
                   <Input
                     onChange={handleInputChange}
                     type="email"
                     size="40"
-                    label="Email (Required):"
+                    label="Email &nbsp;&nbsp; * "
                     name="email"
                     placeholder="Email (Required and in email format)"
+                  />
+                    <Input
+                    onChange={handleInputChange}
+                    type="text"
+                    size="40"
+                    label="City: "
+                    name="city"
+                    placeholder="City"
                   />
                 </Col>
                 <Col size="md-4">
@@ -190,6 +186,17 @@ function Signup() {
                     placeholder="URL to your Photograph"
                   />
                   <Input
+                    defaultValue=""
+                    onChange={handleInputChange}
+                    type="password"
+                    minLength="5"
+                    maxLength="20"
+                    size="40"
+                    label="Password &nbsp;&nbsp; * "
+                    name="password"
+                    placeholder="5-20 characters required"
+                  />
+                    <Input
                     onChange={handleInputChange}
                     type="number"
                     size="10"
@@ -197,28 +204,20 @@ function Signup() {
                     name="zipCode"
                     placeholder="Zipcode"
                   />
-                  <Input
-                    onChange={handleInputChange}
-                    type="text"
-                    size="40"
-                    label="City: "
-                    name="city"
-                    placeholder="City"
-                  />
                 </Col>
               </Row>
             </div>
           </div>
-          <div className="petDetails">
+          <div className="petDetails" style={{backgroundColor: "white"}}>
             <div className="content">
               <Row>
-                <h3>Your Pet's Details:</h3>
+              <h2 style={{marginLeft: "2%" ,  float: "left"}}>Pet's Details</h2><p style={{marginLeft: "85%", marginBottom:"2%"}}>* Required Fields</p>
                 <Col size="md-4">
                   <Input
                     onChange={handleInputChange}
                     type="text"
                     size="40"
-                    label="Your Pet's Name (Required): "
+                    label="Your Pet's Name &nbsp;&nbsp; * "
                     name="petName"
                     placeholder="Your Pet's Name (Required)"
                   />

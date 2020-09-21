@@ -17,7 +17,11 @@ export default function MatchCards(props) {
     }, [setIsLoading, props.length]
     )
     if (isLoading) {
-        return <div>Loading</div>
+        return (
+        <div>
+            <h1>No Current Matches</h1>
+        </div>
+        )
     } if (!isLoading) {
         return (
             <div className="Container fixed">
@@ -38,7 +42,7 @@ export default function MatchCards(props) {
                                 <div className="messages">
                                     <Col size="md-7 messages">
                                         <div>
-                                            <p className="text">{props.message}{item.userData.userName}</p>
+                                            <p className="text">{item.userData.userName}{props.message}</p>
                                         </div>
                                     </Col>
                                 </div>
@@ -46,7 +50,7 @@ export default function MatchCards(props) {
                                     <Col size="md-7 messageBtn">
 
                                         <div className="button-container">
-                                            <a style={{ borderTopRightRadius: "15px", borderBottomRightRadius: "15px", borderTopLeftRadius: "0px", borderBottomLeftRadius: "0px", backgroundColor: "#8ABAD3FF" }} type="submit" className="btn button-message" href={`mailto:doggie@gmail.com?subject=RW:`}><p className="btnText" style={{ fontFamily: "Arial", textEmphasis: "bolder" }}>Message Now</p></a>
+                                            <a style={{ borderTopRightRadius: "15px", borderBottomRightRadius: "15px", borderTopLeftRadius: "0px", borderBottomLeftRadius: "0px", backgroundColor: "white" , border: "solid black 1px" }} type="submit" className="btn button-message" href={`mailto:doggie@gmail.com?subject=RW:`}><p className="btnText" style={{ fontFamily: "Arial", fontWeight: "bolder" }}>Message Now</p></a>
                                         </div>
                                     </Col>
                                 </div>

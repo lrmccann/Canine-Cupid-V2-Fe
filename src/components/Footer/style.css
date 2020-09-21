@@ -1,11 +1,14 @@
 .footer {
-  height: 55px;
-  background-color: #8ABAD3FF;
+  height: 35px;
+  background-color: white;
   position: relative;
   text-align: center;
+  padding-bottom: 2%;
   padding-top: .5%;
-  background: rgb(255,89,89);
-  background: linear-gradient(0deg, rgba(255,89,89,1) 0%, rgba(245,159,159,1) 100%);
+  margin-top: 2%;
+  border: solid black 1px;
+  /* background: rgb(255,89,89);
+  background: linear-gradient(0deg, rgba(255,89,89,1) 0%, rgba(245,159,159,1) 100%); */
 
 }
 
@@ -20,5 +23,5 @@
 } */
 
 .textAlt{
-  font-size: 25px;
+  font-size: 15px;
 }
