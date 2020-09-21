@@ -54,6 +54,7 @@ let Profile = () => {
                         <div style={{marginTop:"5%", marginLeft:"5%"}}>Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.age}</div>
                         <div style={{marginTop:"5%", marginLeft:"5%"}}>Vaccinated: {vaccinated}</div>
                         <div style={{marginTop:"5%", marginLeft:"5%"}}>Trained: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{trained}</div>
+                        <div style={{paddingTop: "5%", marginLeft:"5%"}}>Interests: &nbsp;{interests}</div>
                         </Card>
                     </Col>
                 </Row-fluid>
@@ -64,8 +65,8 @@ let Profile = () => {
                     <div style={{paddingTop: "3%"}} >Location: &nbsp;&nbsp;&nbsp;&nbsp;{user.city}</div>
                     <div style={{paddingTop: "3%"}}>Zip Code: &nbsp;&nbsp;&nbsp;&nbsp;{user.zipCode} </div>
                     <div style={{paddingTop: "3%"}}>Join Date: &nbsp;&nbsp;&nbsp;{readableDate}</div>
-                    {/* <div style={{paddingTop: "3%"}}>About my pet: &nbsp;&nbsp;{user.info}</div> */}
-                    <div style={{paddingTop: "3%"}}>About my pet: &nbsp;{interests}</div>
+                    <div style={{paddingTop: "3%"}}>More about my pet: &nbsp;&nbsp;{user.info}</div>
+                    {/* <div style={{paddingTop: "3%"}}>About my pet: &nbsp;{interests}</div> */}
                     <EditProfileButton/>
                     </ProfDetails>
                     </Col>

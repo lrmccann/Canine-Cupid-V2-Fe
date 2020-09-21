@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import UserContext from "../utils/UserContext";
 import Modal from 'react-bootstrap/Modal';
 import { ModalButton } from "../components/Button";
+import RadioButton from "../components/RadioButton"
 import "./Signup.css"
 
 function EditProfile() {
@@ -19,6 +20,21 @@ function EditProfile() {
   // Setting our component's initial state
   const [formObject, setFormObject] = useState(user)
   console.log("state", formObject);
+
+   ///////////////////+++++++++++++++++////////////////////
+   const [checkVaccinated, setCheckVaccinated] = useState(user.vaccinated) 
+   const [checkTrained, setCheckTrained] = useState(user.trained)
+   const [checkPark, setCheckPark] = useState(user.park) 
+   const [checkBall, setCheckBall] = useState(user.ball) 
+   const [checkFrisbee, setCheckFrisbee] = useState(user.frisbee)
+ 
+   console.log("checkVaccinated", checkVaccinated);
+   console.log("checkTrained", checkTrained);
+   console.log("checkPark", checkPark);
+   console.log("checkBall", checkBall);
+   console.log("checkFrisbee", checkFrisbee);
+   /////////////////////////++++++++++++++++/////////////////
+
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -32,6 +48,12 @@ function EditProfile() {
     console.log("formValid", formValid)
     console.log("user.userName", user.userName)
     if (formValid === true) {
+      formObject.vaccinated = checkVaccinated
+      formObject.trained = checkTrained
+      formObject.park = checkPark
+      formObject.ball = checkBall
+      formObject.frisbee = checkFrisbee
+
       API.updateUser({
         userData: formObject
       }, user.userName)
@@ -76,14 +98,14 @@ function EditProfile() {
   return (
     <div>
       <Navbar />
-      <h2 style={{ fontFamily: "Georgia, serif" , margin: "0 0 0 47%" }}>Edit  Profile</h2>
-      <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%", marginTop: "5%" }}></div>
+      <h2 style={{ fontFamily: "Georgia, serif" , margin: "2.5% 0 0 44%" , fontSize:"50px"}}>Edit  Profile</h2>
+      <div style={{ border: "solid black 1px", margin: "4% 10% 5% 10%" }}></div>
       <Container fluid>
         <form>
-          <div className="userDetails">
+          <div className="userDetails" style={{backgroundColor: "white"}}>
             <div className="content">
               <Row>
-                <h3>Your Details:</h3>
+              <h2 style={{marginLeft: "2%" , float:"left" }}>User Details</h2><p style={{marginLeft: "85%", marginBottom:"2%"}}>* Required Fields</p>
                 <Col size="md-4">
                   <Input
                     onChange={handleInputChange}
@@ -92,6 +114,7 @@ function EditProfile() {
                     minLength="5"
                     maxLength="20"
                     size="40"
+                    fontWeight="bolder"
                     label="User Name (Can not change this): "
                     name="userName"
                     placeholder="User Name (5-20 characters required)"
@@ -102,20 +125,9 @@ function EditProfile() {
                     defaultValue={user.email}
                     type="email"
                     size="40"
-                    label="Email: "
+                    label="Email &nbsp;&nbsp; * "
                     name="email"
                     placeholder="Email (Required and in email format)"
-                  />
-                </Col>
-                <Col size="md-4">
-                  <Input
-                    onChange={handleInputChange}
-                    defaultValue={user.zipcode}
-                    type="number"
-                    size="10"
-                    label="Zipcode: "
-                    name="zipCode"
-                    placeholder="Zipcode"
                   />
                   <Input
                     onChange={handleInputChange}
@@ -127,22 +139,53 @@ function EditProfile() {
                     placeholder="City"
                   />
                 </Col>
+                <Col size="md-4">
+                <Input
+                    onChange={handleInputChange}
+                    defaultValue={user.userPhotoUrl}
+                    type="text"
+                    size="2000"
+                    label="URL to your Photograph: "
+                    name="userPhotoUrl"
+                    placeholder="URL to your Photograph"
+                  />
+                    {/* <Input
+                    defaultValue=""
+                    onChange={handleInputChange}
+                    type="password"
+                    minLength="5"
+                    maxLength="20"
+                    size="40"
+                    label="Password &nbsp;&nbsp; * "
+                    name="password"
+                    placeholder="5-20 characters required"
+                  /> */}
+                  <Input
+                    onChange={handleInputChange}
+                    defaultValue={user.zipCode}
+                    type="number"
+                    size="10"
+                    label="Zipcode: "
+                    name="zipCode"
+                    placeholder="Zipcode"
+                  />                  
+                </Col>
               </Row>
             </div>
           </div>
           <div className="petDetails">
             <div className="content">
               <Row>
-                <h3>Your Pet's Details:</h3>
+              <h2 style={{marginLeft: "2%" ,  float: "left"}}>Pet's Details</h2><p style={{marginLeft: "85%", marginBottom:"2%"}}>* Required Fields</p>
                 <Col size="md-4">
                   <Input
                     onChange={handleInputChange}
                     defaultValue={user.petName}
                     type="text"
                     size="40"
-                    label="Your Pet's Name (Required): "
+                    label="Your Pet's Name &nbsp;&nbsp; * "
                     name="petName"
-                    placeholder="Your Pet's Name (required)"
+                    placeholder="Your Pet's Name (Required)"
                   />
                   <Input
                     onChange={handleInputChange}
@@ -166,31 +209,71 @@ function EditProfile() {
                   />
                   <Input
                     onChange={handleInputChange}
-                    defaultValue={user.photoUrl}
+                    defaultValue={user.petPhotoUrl}
                     type="text"
                     size="2000"
                     label="URL to your Pet's Photograph: "
-                    name="photoUrl"
+                    name="petPhotoUrl"
                     placeholder="URL to your Pet's Photograph"
+                  />
+                  <RadioButton
+                    radioLabel = "Vaccinated:"
+                    radioName = "vaccinated"
+                    defaultChecked={checkVaccinated}
+                    // checked={checkVaccinated}
+                    // {this.props.editable ? editable={this.props.editableOpts} : null}
+                    // {{checkVaccinated} ? defaultChecked : null}
+                    onChange={(event)=>setCheckVaccinated(event.target.value)}
+                  />
+                  <RadioButton
+                    radioLabel = "Trained:"
+                    radioName = "trained"
+                    defaultChecked={checkTrained}
+                    // checked={checkTrained}
+                    onChange={(event)=>setCheckTrained(event.target.value)}
                   />
                 </Col>
                 <Col size="md-4">
                   <p>Your Pet's Interests:</p>
-                  <Checkbox
-                    onChange={handleInputChange}
-                    label="Playing in the Park:  "
-                    name="park"
-                  />
-                  <Checkbox
-                    onChange={handleInputChange}
-                    label="Playing with a Ball:  "
-                    name="ball"
-                  />
-                  <Checkbox
-                    onChange={handleInputChange}
-                    label="Playing with a Frisbee:  "
-                    name="frisbee"
-                  />
+                  <label>
+                    Playing in the park :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input
+                      type="checkbox"
+                      name="park"               
+                      // defaultValue={user.park}       
+                      // defaultChecked={user.park}
+                      // defaultChecked={checkPark}       
+                      checked={checkPark}
+                      onChange={(event)=>setCheckPark(event.target.checked)}      
+                      // checked={state.park}                
+                      // onChange={handleChange}
+                      // onChange={(event)=>setCheckPark(event.target.value)}
+                    />
+                  </label>
+                  <label>
+                    Playing with a ball :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input
+                      type="checkbox"
+                      name="ball"     
+                      // defaultValue={user.ball}  
+                      // defaultChecked={user.ball}          
+                      // defaultChecked={checkBall}            
+                      checked={checkBall}
+                      onChange={(event)=>setCheckBall(event.target.checked)} 
+                    />
+                  </label>
+                  <label>
+                    Playing with a frisbee :&nbsp;
+                    <input
+                      type="checkbox"
+                      name="frisbee"
+                      // defaultValue={user.frisbee}    
+                      // defaultChecked={user.frisbee}   
+                      // defaultChecked={checkFrisbee}                      
+                      checked={checkFrisbee}
+                      onChange={(event)=>setCheckFrisbee(event.target.checked)} 
+                    />
+                  </label>
                   <TextArea
                     onChange={handleInputChange}
                     defaultValue={user.info}
