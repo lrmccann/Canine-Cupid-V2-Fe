@@ -45,7 +45,7 @@ useEffect(()=>{
             <Col size="md-12">
               <MatchCards
                 arrayData={finalUser}
-                message={"You have a new message waiting from  "}
+                message={" sent you a message, reply now!!"}
                 image="https://cdn.iconscout.com/icon/free/png-256/user-avatar-contact-portfolio-personal-portrait-profile-6-5623.png"
                 {...MessageButton}
               />

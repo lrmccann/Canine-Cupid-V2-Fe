@@ -8,14 +8,14 @@
 }
 
 .profDetails > .content {
-    padding: 15px;
+    padding: 1.75%;
     color:black;
     font-weight: bolder;
 }
 
-.profDetails > .content > h4{
-padding-top: 15px;
-}
+/* .profDetails > .content > h4{
+padding-top: 5%;
+} */
 
 .line{
     border: solid black 1px;

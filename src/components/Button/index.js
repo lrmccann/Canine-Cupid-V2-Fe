@@ -40,24 +40,56 @@ export function LoginButton(props) {
     );
 }
 export function LoginModalButton(props) {
+    console.log(props)
     return ( 
         <button
-            className="LoginModalButton topright" {...props}>
+            className="LoginModalButton topright" {...props}
+            onClick={props.onClick}
+            >
             X
         </button>
     );
 };
+
 export function SignupButton(props) {
+        const history = useHistory();
+        function handleClick() {
+            history.push("/signup");
+        }
+        return (
+            <button 
+            className="Signuphome" 
+            onClick={handleClick} >
+                Sign Up
+            </button>
+        );
+}
+export function HomeButton(props) {
+    const history = useHistory();
+    function handleClick() {
+        history.push("/login");
+    }
     return (
         <button 
-            className="appbtnblue"
-            {...props}
-            >
-            Sign Up
+        className="homeButton" 
+        onClick={handleClick} >
+            Home Page
         </button>
     );
 }
-
+export function AboutUsButton(props) {
+    const history = useHistory();
+    function handleClick() {
+        history.push("/aboutus");
+    }
+    return (
+        <button 
+        className="abtUs" 
+        onClick={handleClick} >
+            Our Story
+        </button>
+    );
+}
 export function EditProfileButton() {
     const history = useHistory();
     function handleClick() {

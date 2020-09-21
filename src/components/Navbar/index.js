@@ -1,6 +1,6 @@
 import React, { Children } from "react"
 import "./style.css";
-import { MyProfileButton, MatchNowButton, MatchesButton, LogOutButton } from "../Button"
+import { MyProfileButton, MatchNowButton, MatchesButton, LogOutButton , AboutUsButton , HomeButton, SignupButton } from "../Button"
 
 
 
@@ -17,15 +17,29 @@ export function Navbar() {
 }
 
 export function NavbarNolinks(props) {
-  console.log(props.children.props.onClick)
+  console.log(props)
   return (
     <div className="navbar-login">
-      <button className="nav-bar-login"
-      onClick={props.children.props.onClick}
-      > Sign In
-      </button>
+        <SignupButton />
+        <button className="nav-bar-login"
+        onClick={props.children.props.onClick}
+        > Log In
+        </button>
+        <AboutUsButton />
     </div>
   );
 }
+
+export function NavbarAboutUs(props) {
+  // console.log(props)
+  return (
+    <div className="navbar-login">
+      <HomeButton/>
+    </div>
+  );
+}
+
+
+
 
 export default Navbar;

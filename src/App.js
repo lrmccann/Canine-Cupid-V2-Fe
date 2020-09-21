@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import aboutUs from "./pages/AboutUs";
 import EditProfile from "./pages/EditProfile";
 import Signup from "./pages/Signup";
 import Matchnow from "./pages/Matchnow";
@@ -81,7 +82,7 @@ function App() {
          {/* <Wrapper>  */}
           <Route exact activeClassName path="/" component={Login} />
           <Route exact activeClassName  path="/login" component={Login} />
-          
+          <Route exact activeClassName path="/aboutus" component={aboutUs} />
           <Route exact activeClassName  path="/signup" component={Signup} />
           <ScrollToTop>
             <Switch>
