@@ -1,5 +1,4 @@
 .card {
-  background-color: transparent;
   border-radius: 2px;
   height: 425px;
   width: 500px;
@@ -12,23 +11,43 @@
   margin-bottom: 20%;
   margin-top: 1%;
 }
-.content-card{
+/* .content-card{
   padding-top:2% ;
-}
+} */
 .card > .img-container {
+  background-color: transparent;
   height: 60%;
   overflow: hidden;
   text-align: center;
 }
 .card > .img-container > img {
+  /* padding: 2.5% ; */
   width: 60%
+}
+
+ .card > .content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 10px;
+} 
+
+
+/* .card > .img-container {
+  background-color: transparent;
+  height: 96%;
+  overflow: hidden;
+  text-align: center;
+}
+.card > .img-container > img {
+  padding: 2.5% ;
+  width: 97%
 }
 
 .card > .content {
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: 20px;
-}
+  font-size: 10px;
+}  */
 
 .card > .remove {
   color: #ff1744;

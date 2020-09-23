@@ -1,13 +1,23 @@
 	
 .map-container{
-	border: black solid 3px;
+	/* border: rgb(232, 86, 86) dashed 10px; */
 	height: 100vh;
 	margin: auto;
-	margin-top: 7.5%;
+	/* margin-top: 7.5%; */
 	bottom: 0;
 	left: 0;
 	right: 0;
-    max-height: 500px;
+    max-height: 482px;
+	max-width: 650px;
+	z-index: 1
+ }
+ .border-hello{
+	border: rgb(232, 86, 86) dashed 10px;
+	padding: 4px;
+	height: 100%;
+	margin: auto;
+	margin-top: 7.5%;
+    max-height: 510px;
 	max-width: 650px;
 	z-index: 1
  }

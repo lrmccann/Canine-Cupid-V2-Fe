@@ -6,9 +6,11 @@ import UserContext from "../utils/UserContext";
 import { Col, Row, Container } from "../components/Grid";
 import { Input } from "../components/Form";
 import { LoginButton } from "../components/Button";
-import { ModalButton, LoginModalButton } from "../components/Button";
+import { ModalButton, LoginModalButton, XButton } from "../components/Button";
 import {NavbarNolinks} from '../components/Navbar';
 import Header from "../components/Header";
+import DogLogin from "./images/dog-for-login.png";
+import LoginText from "./images/login-text.png";
 import "./Signup.css"
 
 function Login() {
@@ -103,7 +105,6 @@ function Login() {
     event.preventDefault();
     history.push("/signup");
   };
-
   return (
     <div className="login-page-content">
           <Header />
@@ -117,11 +118,11 @@ function Login() {
         <Container fluid>
           <Row>
           <div className="col-md-5" style={{marginTop:"17%", marginLeft:"4%" , float:"left", opacity: "100%"}}>
-                <img className="login-text" src={require('../login-text.png')}/>
+                <img className="login-text" src={LoginText}/>
             </div>
             <div className="col-md-6" style={{float:"left", marginTop:"2%" , marginLeft: "3.5%" }}>
             <Col size="md-6">
-              <img className="login-image" src={require('../dog-for-login.png')}/>
+              <img className="login-image" src={DogLogin}/>
               </Col>
               </div>
           </Row>
@@ -129,7 +130,11 @@ function Login() {
         <Modal className="login-modal body" show={loginIsOpen} onHide={hideModal}>
           <Modal.Header>
             <Modal.Title> <h4 style={{ textAlign: "center" }}>Enter your pup's credentials</h4></Modal.Title>
-            <LoginModalButton onClick={hideModal}></LoginModalButton>
+            <XButton 
+            onClick={hideModal}
+            >
+            </XButton>
+
           </Modal.Header>
           <Modal.Body>
             <form>
@@ -179,7 +184,17 @@ function Login() {
           </Modal.Header>
           <Modal.Body>{isErrorMessage}</Modal.Body>
           <Modal.Footer>
-            <ModalButton onClick={hideModal}>Ok</ModalButton>
+            <ModalButton
+              height="40px"
+              width="130px"
+              border="1px solid black"
+              float="right"
+              fontSize="20px"
+              marginRight=".2%"
+              marginBottom=".3%"
+              fontWeight="bold"
+              backgroundColor="white"
+              onClick={hideModal}>Ok</ModalButton>
           </Modal.Footer>
         </Modal>
         {/* ------------------------------------ */}

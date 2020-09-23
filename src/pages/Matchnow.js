@@ -85,9 +85,9 @@ let Matchnow = () => {
     return (
         <div>
         <Navbar />
-            <h2 style={{fontFamily: "Georgia, serif" , margin: "0 0 0 27%" }}>Get yo pup the lovin they deserve and match now!</h2>
-            <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%" }}></div>
-
+        <div style={{ backgroundColor:"rgb(232, 86, 86)", textAlign: "center" , width:"80%" ,  height:"110px" , paddingTop:"2%"  , borderRadius : "25px" , marginLeft:"9%" , marginBottom:"3%" , fontFamily: "Georgia, serif"}}>
+        <h2 style={{ color:"white" , fontSize:"45px"}}>Get yo pup the lovin they deserve and match now!</h2>
+        </div>
             <Container>
                 <Row>
                     <Col size="md-3">
@@ -99,7 +99,7 @@ let Matchnow = () => {
                         />
                     </Col>
                     <Col size="md-6">
-                    <Card petName={newUserData.petName} photoUrl={newUserData.photoUrl}>
+                    <Card petName={newUserData.petName} photoUrl={newUserData.photoUrl} message={"User Pic"}>
                         <div style={{paddingTop: "3%", paddingLeft: "4%"}}>Pet name:  &nbsp;&nbsp;{newUserData.petName}</div> 
                         <div style={{paddingTop: "3%", paddingLeft: "4%"}}>Breed:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {newUserData.breed}</div> 
                         <div style={{paddingTop: "3%" ,paddingLeft: "4%"}}>Age:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {newUserData.age}</div>
@@ -126,7 +126,6 @@ let Matchnow = () => {
                         <div style={{paddingTop: "3%" }}>Zip Code:&nbsp;&nbsp;&nbsp;{newUserData.zipCode}</div>
                         <div style={{paddingTop: "3%" }}>Join Date:&nbsp;&nbsp;{readableDate}</div>
                         <div style={{paddingTop: "3%"}}>About my pet:&nbsp;&nbsp;{newUserData.info}</div>
-                        <div style={{paddingTop: "3%"}}>This cute pup is located only : 2.3 miles away</div>
                         </ProfDetails>
                         </div>
                     </Col>
