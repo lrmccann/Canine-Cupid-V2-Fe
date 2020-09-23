@@ -23,12 +23,24 @@ export function MessageButton(props) {
 export function ModalButton(props) {
     return ( 
         <button
-            className="appbtnpink" {...props}>
-            Ok
+            className="LoginModalButton"
+            onClick={props.onClick}
+            style={props}>
+            Okay
         </button>
     );
 };
-
+export function XButton(props) {
+    console.log(props)
+    return ( 
+        <button
+            className="LoginModalButton"
+            onClick={props.onClick}
+            style={props}>
+            X
+        </button>
+    );
+};
 export function LoginButton(props) {
     return (
         <button 
@@ -40,7 +52,6 @@ export function LoginButton(props) {
     );
 }
 export function LoginModalButton(props) {
-    console.log(props)
     return ( 
         <button
             className="LoginModalButton topright" {...props}
@@ -99,7 +110,7 @@ export function EditProfileButton() {
         <button style={{marginLeft:"22%"}}
             className="editProfile"
             onClick={handleClick} >
-            Edit Profile
+            <p className="edit-btn"> Edit Profile </p>
         </button>
     );
 }
@@ -113,7 +124,7 @@ export function MyProfileButton() {
         <button 
         className="btn" 
         onClick={handleClick} >
-            My Profile
+           <p className="btn-login" > My Profile </p>
         </button>
     );
 }
@@ -145,7 +156,7 @@ export function MatchNowButton() {
         <button 
         className="btn" 
         onClick={handleClick} >
-            Match Now
+          <p className="btn-login" > Match Now </p>
         </button>
     );
 }
@@ -168,7 +179,7 @@ export function MatchesButton() {
     <button 
     className="btn" 
     onClick={handleClick} >
-        Matches
+      <p className="btn-login" > Matches </p>
     </button>
     );
 }
@@ -189,7 +200,7 @@ export function LogOutButton() {
         <button 
         className="btn" 
         onClick={handleClick} >
-            Log Out
+                  <p className="btn-login" > Log Out </p>
         </button>
     );
 }

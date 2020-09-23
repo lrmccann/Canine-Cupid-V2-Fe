@@ -13,7 +13,8 @@ import ScrollToTop from "./components/ScrollTop";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Text from "./components/MyText"
 // import { profile } from "console";
-import { UserProvider } from "./utils/UserContext"
+import { UserProvider } from "./utils/UserContext";
+import DogLogin from "./images/dog-for-login.png";
 import "./App.css";
 
 function App() {

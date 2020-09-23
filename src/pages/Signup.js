@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import Modal from 'react-bootstrap/Modal';
 import { ModalButton } from "../components/Button";
 import RadioButton from "../components/RadioButton"
+import {NavbarSignUp}from "../components/Navbar";
 import "./Signup.css"
 
 function Signup() {
@@ -139,8 +140,10 @@ function Signup() {
   
   return (
     <div>
-      <h2 style={{ fontFamily: "Georgia, serif" , margin: "2.5% 0 0 44%" , fontSize:"50px" }}>Sign Up</h2>
-      <div style={{ border: "solid black 1px", margin: "4% 10% 5% 10%" }}></div>
+      <NavbarSignUp />
+      <div style={{ backgroundColor:"rgb(232, 86, 86)", textAlign: "center" , width:"80%" ,  height:"110px" , paddingTop:"2%"  , borderRadius : "25px" , marginLeft:"9%" , marginBottom:"3%" , fontFamily: "Georgia, serif" , marginTop:"5%"}}>
+        <h2 style={{ color:"white" , fontSize:"45px"}}>Sign up</h2>
+        </div>
       <Container fluid>
         <form>
           <div className="userDetails" style={{backgroundColor: "white"}}>

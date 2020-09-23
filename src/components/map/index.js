@@ -25,7 +25,7 @@ const Map = () => {
     return () => map.remove();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return <div className="map-container" ref={mapContainerRef} />;
+  return <div className="border-hello" style={{border:"dashed rgb(232, 86, 86) 10px"}}> <div className="map-container" ref={mapContainerRef} /> </div>;
  
 };
 

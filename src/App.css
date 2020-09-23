@@ -1,8 +1,8 @@
 body{   
     /* background-image: url("dogsworld.jpg");  */
-    background-image: url("dog-world-2.png"); 
+    background-image: url("./images/dog-world-2.png"); 
     background-color: rgb(232, 86, 86) ;
     /* background-color:rgb(232, 86, 86); */
-    background-blend-mode: luminosity;
+    background-blend-mode: hard-light;
     background-repeat: repeat;
 }

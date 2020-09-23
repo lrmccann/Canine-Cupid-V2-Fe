@@ -1,7 +1,8 @@
 .footer {
   height: 35px;
+  width: 100%;
   background-color: white;
-  position: relative;
+  position: absolute;
   text-align: center;
   padding-bottom: 2%;
   padding-top: .5%;

@@ -5,7 +5,7 @@
   text-align:center;
   font-family: 'Poppins', sans-serif;
   display: flex;
-  background-image: url('./images//Simple\ Quote\ Pink\ Tumblr\ Banner\ \(4\)\ 2\ copy.png');
+  background-image: url("./images//heading-image.png");
   padding-right: 50%;
 }
 /* .title{

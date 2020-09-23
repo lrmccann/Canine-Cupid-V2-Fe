@@ -4,11 +4,11 @@ import { MyProfileButton, MatchNowButton, MatchesButton, LogOutButton , AboutUsB
 
 
 
-export function Navbar() {
-
+export function Navbar(props) {
+  console.log(props.color)
   return (
     <div className="navbar">
-    <MyProfileButton/>
+    <MyProfileButton />
     <MatchNowButton/>
     <MatchesButton/>
     <LogOutButton/>
@@ -31,14 +31,25 @@ export function NavbarNolinks(props) {
 }
 
 export function NavbarAboutUs(props) {
-  // console.log(props)
+  console.log(props)
   return (
     <div className="navbar-login">
-      <HomeButton/>
+      <HomeButton
+      {...props} 
+      />
     </div>
   );
 }
-
+export function NavbarSignUp(props) {
+  console.log(props)
+  return (
+    <div className="navbar-signup">
+      <HomeButton
+      {...props} 
+      />
+    </div>
+  );
+}
 
 
 

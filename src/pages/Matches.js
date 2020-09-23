@@ -38,21 +38,26 @@ useEffect(()=>{
     return (
       <div>
         <Navbar />
-        <h2 style={{ margin: "0 0 0 38%" }}>{user.userName}'s Matches</h2>
-        <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%" }}></div>
-        <Container fluid style={{ margin: "0 0 0 0" }}>
+        <div style={{ backgroundColor:"rgb(232, 86, 86)", textAlign: "center" , width:"80%" ,  height:"110px" , paddingTop:"2%"  , borderRadius : "25px" , marginLeft:"9%" , marginBottom:"3%" , fontFamily: "Georgia, serif"}}>
+          {/* top     right      bottom      left  */}
+        <h2 style={{ color:"white" , fontSize:"45px"}}>{user.userName}'s Matches</h2>
+        {/* <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%" }}></div> */}
+        </div>
+        <Container fixed>
           <Row>
             <Col size="md-12">
               <MatchCards
                 arrayData={finalUser}
-                message={" sent you a message, reply now!!"}
+                message={" sent you a message, reply now!"}
                 image="https://cdn.iconscout.com/icon/free/png-256/user-avatar-contact-portfolio-personal-portrait-profile-6-5623.png"
                 {...MessageButton}
               />
             </Col>
       </Row>
-            <h3 style={{marginTop: "5%", marginLeft:"32.5%"}}>Meet up at a pet-friendly park near you</h3>
-            <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%" }}></div>
+            <div style={{ backgroundColor:"rgb(232, 86, 86)", textAlign: "center" , width:"80%" ,  height:"110px" , paddingTop:"2%"  , borderRadius : "25px" , marginLeft:"9%" , marginBottom:"2%" , marginTop:"5%" , fontFamily: "Georgia, serif"}}>
+            <h3 style={{ color:"white" , fontSize:"45px"}}>Meet up at a pet-friendly park near you</h3>
+            {/* <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%" }}></div> */}
+            </div>
       <Map />
     </Container>
     </div>
