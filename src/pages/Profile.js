@@ -51,12 +51,12 @@ let Profile = (props) => {
                     <Col size="md-12">
                         <Card petName={user.petName} petPhotoUrl={user.petPhotoUrl} messageTwo={"Dog Pic"} message = {"My Pic"} img1 = {user.petPhotoUrl} img2={user.userPhotoUrl} >
                             <div style={{float:"left" , width:"50%" }}>
-                            <div style={{ marginLeft: "5%" , fontSize:"25px" }}>Pet name: &nbsp;&nbsp;{user.petName}</div>
+                            <div style={{ marginTop:"5%", marginLeft: "5%" , fontSize:"25px" }}>Pet name: &nbsp;&nbsp;{user.petName}</div>
                             <div style={{ paddingTop: "2.5%", marginLeft: "5%" , fontSize:"25px" }}>Breed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.breed}</div>
                             <div style={{ paddingTop: "2.5%", marginLeft: "5%" , fontSize:"25px" }}>Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.age}</div>
                             </div>
                             <div style={{float: "left" ,width:"50%" }}>
-                            <div style={{ marginLeft: "5%" , fontSize:"25px"  }}>Vaccinated: {vaccinated}</div>
+                            <div style={{ marginTop:"5%", marginLeft: "5%" , fontSize:"25px"  }}>Vaccinated: {vaccinated}</div>
                             <div style={{ marginTop: "2.5%", marginLeft: "5%" , fontSize:"25px" }}>Trained: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{trained}</div>
                             <div style={{ paddingTop: "2.5%", marginLeft: "5%" , fontSize:"25px" }}>Interests: &nbsp;{interests}</div>
                             </div>
