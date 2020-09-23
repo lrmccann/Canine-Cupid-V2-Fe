@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar";
 import API from "../utils/API";
 import UserContext from "../utils/UserContext"
 import Moment from 'react-moment';
+import FlashMessage from "react-flash-message";
 
 let Matchnow = () => {
     
@@ -17,6 +18,8 @@ let Matchnow = () => {
 
     const [matchedNames, setMatchedName] = useState(user.matchesYes)
     console.log("matchedNames",matchedNames);
+
+    const [status, setStatus] = useState(false);
 
     let readableDate = <Moment format="YYYY/MM/DD">{newUserData.date}</Moment>;
     
@@ -59,7 +62,10 @@ let Matchnow = () => {
 
     async function getNewUser (name){   
         await API.getUserByName(name)
-        .then(response => getNewUserData(response.data))
+        .then(response => {
+            setStatus(false);
+            getNewUserData(response.data)
+        })
     }
 
     async function setNewMatches (name1, name2){
@@ -72,6 +78,7 @@ let Matchnow = () => {
     function handleYesSubmit() {
         console.log("Yes")
         // const data = matchedNames.push(newUserName);
+        setStatus(true);
         setNewMatches(user.userName, newUserData.userName);
         setMatchedName(matchedNames => [...matchedNames, userForArr]);
         getNextUser();
@@ -113,6 +120,12 @@ let Matchnow = () => {
                             direction="right"
                             onClick={handleYesSubmit}
                         />
+                        {status && (
+                            <FlashMessage duration={10000} >
+                               <strong style={{backgroundColor:"rgb(232, 86, 86)", fontSize:"25px", fontColor: "white", fontFamily: "Georgia, serif"}}>MATCHED!</strong>
+                            </FlashMessage>
+                        )}
+    
                     </Col>
                 </Row>
                 </Container>

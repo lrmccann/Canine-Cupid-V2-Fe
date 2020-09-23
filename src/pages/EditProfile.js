@@ -290,7 +290,7 @@ function EditProfile() {
                    disabled={!(formObject.petName && formObject.email)}
                     onClick={handleFormSubmit}
                   >
-                    Save Changes
+                    Save Changes                   
                   </FormBtn>
 {/* ----------------------Rendering Modal */}
                     <Modal className="my-modal" show={isOpen} onHide={hideModal}>
