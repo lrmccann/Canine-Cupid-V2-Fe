@@ -32,7 +32,10 @@ quick link: http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com
 ---
 
 ## Credits
-
+- Logan MCcann
+- Carlos Reyes
+- Dmitrii Z
+- Isha Bali
 ---
 
 ## License
