@@ -39,8 +39,28 @@ quick link: http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com
 ---
 
 ## License
+MIT License
+
+Copyright (c) [2020] [Logan R McCann]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 
 
-![alt text](https://lh3.googleusercontent.com/YmbjcO0_59xdp6b1kNXyqecGfSCg6bd_GRWM0-8XlFxPMk2WyqXG8UVkLar6yNS0BivVENBhdWuAj7lXNT-eUl6bVfKUjRe7Ey48M7WVHMj9Iw1dPpeYZS_hKuW9c5KCY_cevtH25NDlPOolO0wKSqY2WSYb0t2UoD49kG1O6IRVGHvPYoSWYFTfeRCzzoIJoicT8FOP-neDZDHWYVtakswI0uOB65sMYdkxSlrWhKIp9vfdO2LWE4a9Euk2pNe47hl7t8xLAsbAv0eFMrdGOVOT08FJI0fUBIzX8-FX6DaTUChNauGKD2KK1dsiKraXl5J8tzrlG-u1Xj4Jw20hEWPFq0RYZ1a9h60d48Mg7hi9ymD2FVKm98UIcXeOHGC8FuF0nIMVCf5EjDcV1mewCOyat2HR6n_Bv-_T7Doy5EDm_eq3phGrxtquuXjDrv0KeFj-H-x1gsl4iTJoQNdusCH7gKztYChHAEnrvxNohfEas6nc2aQDlSZaGL1bfCNspNV6plnUs7YdM4B-88Lo-ELVQT5QR5L-2vRsMixsXAekk5uSQL6YUCqmiKleD6eyLQCwyJvE5KkeIpcv5bViGOw2IkhU6VBC5r7qhfMaTIYo81QPUC-cm_bGmIA2swKnCFEsMJE6IE2_Z3u3DtFHP9Npe4qwXw3i3dTGcXynMs5m03t3AccrawQQ6ZJa=w2160-h1116-no?authuser=0)
 
